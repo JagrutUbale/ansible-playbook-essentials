@@ -1,0 +1,11 @@
+---
+# playbook for web servers
+- hosts: www
+  remote_user: vagrant
+  become: yes
+  pre_tasks:
+     - shell: echo 'Beginning to configure NGINX'
+  roles:
+    -  nginx
+  post_tasks:
+     - shell: echo 'Done configuring NGINX'

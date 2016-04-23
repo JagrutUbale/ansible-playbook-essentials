@@ -1,0 +1,5 @@
+---
+# Main tasks for NGINX role
+- include: install.yml
+- include: configure.yml
+- include: service.yml
