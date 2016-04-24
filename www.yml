@@ -6,6 +6,7 @@
   pre_tasks:
      - shell: echo 'Beginning to configure NGINX'
   roles:
-    -  nginx
+    - nginx
+    - wordpress
   post_tasks:
      - shell: echo 'Done configuring NGINX'
