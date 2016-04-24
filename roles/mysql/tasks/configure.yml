@@ -2,8 +2,7 @@
 - name: Create MySQL config
   template:
     src: 'my.cnf.j2'
-    dest: "{{ mysql_cnfpath }}"
-
+    dest: "{{ mysql['config']['cnfpath'] }}"
     mode: 0644
   notify:
     - Restart MySQL service
