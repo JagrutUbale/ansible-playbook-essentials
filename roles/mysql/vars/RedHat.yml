@@ -1,0 +1,6 @@
+---
+# RedHat OS specific config
+mysql_bind: 0.0.0.0
+mysql_cnfpath: /etc/my.cnf
+mysql_service: mysql
+mysql_socket: /var/lib/mysqld/mysqld.sock
