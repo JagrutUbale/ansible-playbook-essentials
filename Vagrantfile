@@ -3,7 +3,11 @@
 # Sample Vagranfile to setup Learning Environment
 # for Ansible Playbook Essentials
 Vagrant.configure(2) do |config|
-  config.vm.box = 'ubuntu/trusty64'
+  # NOTE: For learning purposes this is ok.
+  config.ssh.private_key_path = './insecure_private_key'
+  config.ssh.insert_key = false
+
+  config.vm.box = 'ubuntu/trusty32'
 
   config.vm.define 'control' do |control|
     control.vm.network :private_network, ip: '192.168.61.10'

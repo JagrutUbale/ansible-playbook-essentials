@@ -8,6 +8,6 @@
   roles:
     - { role: nginx, when: ansible_os_family == 'Debian' }
     - { role: php5-fpm }
-    - wordpress
+    - { role: wordpress }
   post_tasks:
      - shell: echo 'Done configuring NGINX'

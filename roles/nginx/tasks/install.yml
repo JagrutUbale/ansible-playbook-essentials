@@ -17,8 +17,7 @@
 - name: Install nginx web server and ensure latest version
   apt:
     name: nginx
-    state: latest
-    force: yes
+    state: present
     update_cache: yes
 
 - name: Start nginx service

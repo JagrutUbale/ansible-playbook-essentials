@@ -17,7 +17,7 @@
   mysql_user:
     name: "{{ item.key }}"
     host: "{{ item.value.host }}"
-    password: "{{ item.value.password }}"
+    password: "{{ item.value.pass }}"
     priv: "{{ item.value.priv }}"
     state: "{{ item.value.state }}"
   with_dict: "{{ mysql['users'] }}"
