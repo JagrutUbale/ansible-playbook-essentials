@@ -3,7 +3,7 @@
 # Sample Vagranfile to setup Learning Environment
 # for Ansible Playbook Essentials
 Vagrant.configure(2) do |config|
-  config.vm.box = 'ubuntu/trusty32'
+  config.vm.box = 'ubuntu/trusty64'
 
   config.vm.define 'control' do |control|
     control.vm.network :private_network, ip: '192.168.61.10'

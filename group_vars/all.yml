@@ -1,3 +1,25 @@
 ansible_ssh_user: vagrant
 ansible_ssh_pass: vagrant
 ansible_ssh_private_key_file: ~/.vagrant.d/insecure_private_key
+
+mysql:
+  config:
+    bind:  "{{ ansible_eth0.ipv4.address }}"
+  databases:
+    example1:
+      state: present
+    example2:
+      state: present
+  users:
+    example:
+      pass: example
+      host: '%'
+      priv: '*.*:ALL'
+      state: present
+
+nginx:
+  phpsites:
+    example1:
+      name: example1.com
+      port: 8080
+      doc_root: /var/www/example1
